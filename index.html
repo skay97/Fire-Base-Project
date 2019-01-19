@@ -10,14 +10,13 @@
 
 </head>
 
-
- 
 <body>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="script.js"></script>
 
 
   <div class="container">
+
     <div class="jumbotron jumbotron-fluid" id="header">
       <div class="container">
         <h1 class="display-4">Employee Data Management</h1>
@@ -25,7 +24,11 @@
       </div>
     </div>
 
-
+    <div class="card">
+      <div class="card-header">
+        Quote
+      </div>
+    </div>
 
     <table class="table">
       <thead>
@@ -68,30 +71,41 @@
 
 
     <div class="form">
+      
+      <div class="card-header">
+        Quote
+      </div>
+      
       <form>
         <div class="form-group">
-
           <label for="exampleFormControlInput1">Employee Name:</label>
-          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name">
+          <input type="email" class="form-control" id="employeeName" placeholder="name">
         </div>
         <div class="form-group">
           <label for="exampleFormControlInput1">Role:</label>
-          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="role">
+          <input type="email" class="form-control" id="role" placeholder="role">
         </div>
         <div class="form-group">
-          <label for="exampleFormControlInput1">Email address:</label>
-          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+          <label for="exampleFormControlInput1">Start Date:</label>
+          <input type="email" class="form-control" id="startDate" placeholder="dd/mm/yy">
         </div>
         <div class="form-group">
           <label for="exampleFormControlInput1">Monthly Rate:</label>
-          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="rate">
+          <input type="email" class="form-control" id="monthlyRate" placeholder="rate">
         </div>
-        
+
       </form>
     </div>
 
 
-    <div class="container"><button type="button" class="btn btn-dark" id="submit">submit</button></div>
+
+    <!-- <div class="container"><button type="button" class="btn btn-dark" id="submit">submit</button></div> -->
+    
+    <div class="button-container">
+      <button type="button" class="btn btn-dark" id="submit">submit</button>
+    </div>
+
+
 
   </div>
 
