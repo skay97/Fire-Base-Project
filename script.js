@@ -1,7 +1,7 @@
-var employeeName = $(employeeName field).val();
-var role = $(role field).val();
-var startDate = $(startDate field).val();
-var monthlyRate = $(monthlyRate field).val();
+var employeeName = $("#employeeName").val();
+var role = $("#role").val();
+var startDate = $("#startDate").val();
+var monthlyRate = $("monthlyRate").val();
 
 $(".submitButton").on("click", function(e) {
     e.preventDefault()
@@ -15,9 +15,9 @@ $(".submitButton").on("click", function(e) {
       <td>${monthlyRate}</td>
       <td>144000</td>
     </tr>`)
-    $(employeeName field).empty();
-    $(role field).empty();
-    $(startDate field).empty();
-    $(monthlyRate field).empty();
+    $("#employeeName").empty();
+    $("#role").empty();
+    $("#startDate").empty();
+    $("#monthlyRate").empty();
 })
 
