@@ -1,5 +1,14 @@
 $(document).ready(function(){
-
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDxN6bpG5NT1KCgQvq35SZKapnr8Bk2CzU",
+    authDomain: "fir-inclass-project.firebaseapp.com",
+    databaseURL: "https://fir-inclass-project.firebaseio.com",
+    projectId: "fir-inclass-project",
+    storageBucket: "fir-inclass-project.appspot.com",
+    messagingSenderId: "83150528120"
+  };
+  firebase.initializeApp(config);
 
 
 $("#submit").on("click", function(e) {
@@ -25,4 +34,5 @@ $("#submit").on("click", function(e) {
     $("#startDate").val("");
     $("#monthlyRate").val("");
 });
+
 });
