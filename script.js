@@ -20,9 +20,9 @@ $("#submit").on("click", function(e) {
         <td>${monthlyRate}</td>
         <td>144000</td>
     </tr>`)
-    $("#employeeName").empty();
-    $("#role").empty();
-    $("#startDate").empty();
-    $("#monthlyRate").empty();
+    $("#employeeName").val("");
+    $("#role").val("");
+    $("#startDate").val("");
+    $("#monthlyRate").val("");
 });
 });
