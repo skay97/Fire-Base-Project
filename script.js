@@ -18,7 +18,7 @@ $(document).ready(function(){
 $("#submit").on("click", function(e) {
     
 
-    e.preventDefault()
+    e.preventDefault();
 
     var employeeName = $("#employeeName").val();
     var role = $("#role").val();
