@@ -18,7 +18,7 @@ $("#submit").on("click", function(e) {
     var startDate = $("#startDate").val()
     var monthlyRate = $("#monthlyRate").val()
 
-    e.preventDefault()
+    e.preventDefault();
 
     $("tbody").append(
     `<tr>
