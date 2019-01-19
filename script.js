@@ -1,34 +1,33 @@
-<<<<<<< HEAD
 
 
-$(document).ready(function () {
+// $(document).ready(function () {
 
 
 
-    $("#submit").on("click", function (e) {
-        var employeeName = $("#employeeName").val();
-        console.log($('#employeeName').val);
-        var role = $($("#role")[0]).val()
-        var startDate = $("#startDate").val()
-        var monthlyRate = $("#monthlyRate").val()
+//     $("#submit").on("click", function (e) {
+//         var employeeName = $("#employeeName").val();
+//         console.log($('#employeeName').val());
+//         var role = $($("#role")[0]).val()
+//         var startDate = $("#startDate").val()
+//         var monthlyRate = $("#monthlyRate").val()
 
-        e.preventDefault()
+//         e.preventDefault()
 
-        $("tbody").append(
-            `<tr>
-           <td>${employeeName}</td>
-           <td>${role}</td>
-           <td>${startDate}</td>
-           <td>72</td>
-           <td>${monthlyRate}</td>
-           <td>144000</td>
-       </tr>`)
-        $("#employeeName").val("");
-        $("#role").val("");
-        $("#startDate").val("");
-        $("#monthlyRate").val("");
-    });
-=======
+//         $("tbody").append(
+//             `<tr>
+//            <td>${employeeName}</td>
+//            <td>${role}</td>
+//            <td>${startDate}</td>
+//            <td>72</td>
+//            <td>${monthlyRate}</td>
+//            <td>144000</td>
+//        </tr>`)
+//         $("#employeeName").val("");
+//         $("#role").val("");
+//         $("#startDate").val("");
+//         $("#monthlyRate").val("");
+//     });
+
 $(document).ready(function(){
   // Initialize Firebase
   var config = {
@@ -44,13 +43,15 @@ $(document).ready(function(){
 
 $("#submit").on("click", function(e) {
     var employeeName = $("#employeeName").val();
-    console.log($('#employeeName').val);
+    // console.log($('#employeeName').val());
     var role = $($("#role")[0]).val()
     var startDate = $("#startDate").val()
     var monthlyRate = $("#monthlyRate").val()
 
     e.preventDefault()
+for (var i=0;i<emplyeeInfo.lenght;i++) {
 
+}
     $("tbody").append(
     `<tr>
         <td>${employeeName}</td>
@@ -66,5 +67,4 @@ $("#submit").on("click", function(e) {
     $("#monthlyRate").val("");
 });
 
->>>>>>> 636f07b63c8fc32bb19f8c7b4379169b30d882d8
 });
