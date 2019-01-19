@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 // $(document).ready(function () {
@@ -28,6 +29,8 @@
 //         $("#monthlyRate").val("");
 //     });
 
+=======
+>>>>>>> e3e9648fc086ed068a7de9b1caf7c9bdfce1f3eb
 $(document).ready(function(){
   // Initialize Firebase
   var config = {
@@ -40,9 +43,18 @@ $(document).ready(function(){
   };
   firebase.initializeApp(config);
 
+  var database = firebase.database();
+
+
+  
 
 $("#submit").on("click", function(e) {
+    
+
+    e.preventDefault();
+
     var employeeName = $("#employeeName").val();
+<<<<<<< HEAD
     // console.log($('#employeeName').val());
     var role = $($("#role")[0]).val()
     var startDate = $("#startDate").val()
@@ -61,10 +73,53 @@ for (var i=0;i<emplyeeInfo.lenght;i++) {
         <td>${monthlyRate}</td>
         <td>144000</td>
     </tr>`)
+=======
+    var role = $("#role").val();
+    var startDate = $("#startDate").val();
+    var monthlyRate = $("#monthlyRate").val();
+    
+
+    var newEmp = {
+        name: employeeName,
+        role: role,
+        start: startDate,
+        rate: monthlyRate
+    }
+
+    database.ref().push(newEmp);
+
+    
+
+
+
+
+>>>>>>> e3e9648fc086ed068a7de9b1caf7c9bdfce1f3eb
     $("#employeeName").val("");
     $("#role").val("");
     $("#startDate").val("");
     $("#monthlyRate").val("");
+
+
+});
+
+
+database.ref().on("child_added", function(childsnapshot) {
+    var employeeName = childsnapshot.val().name;
+    var role = childsnapshot.val().role;
+    var startDate = childsnapshot.val().start;
+    var monthlyRate = childsnapshot.val().rate;
+
+    $("tbody").append(
+        `<tr>
+            <td>${employeeName}</td>
+            <td>${role}</td>
+            <td>${startDate}</td>
+            <td>72</td>
+            <td>${monthlyRate}</td>
+            <td>144000</td>
+        </tr>`)
+
+
 });
 
 });
